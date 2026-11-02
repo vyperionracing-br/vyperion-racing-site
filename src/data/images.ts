@@ -21,7 +21,7 @@ export const teamPhotos: Record<string, string> = {
 // Logo de cada instituição/patrocinador: a chave é o NOME igual ao de content.ts
 export const partnerLogos: Record<string, string> = {
   "Colégio SESI": "/images/sesi-industria.png",
-  "SENAI": "/images/parceiros/senai.jpeg",
+  "SENAI": "/images/parceiros/senai.png",
   "Studio Sherpe": "/images/parceiros/studio-sherpe.png",
   "RM Usinagem": "/images/parceiros/rm-usinagem.png",
   "Rhaela Semijoias": "/images/parceiros/rhaela.png",
