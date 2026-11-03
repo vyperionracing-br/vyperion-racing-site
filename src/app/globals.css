@@ -11,3 +11,12 @@ body { color:#fff; font-family: var(--font-inter), sans-serif; overflow-x: hidde
 section { scroll-margin-top: 72px; }
 .btn { min-height:56px; min-width:56px; }
 @media (prefers-reduced-motion: reduce) { * { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
+
+/* Camada de fundo com altura fixa: não "pula" quando a barra do navegador do celular some */
+.bg-layer { height: 100vh; height: 100lvh; }
+/* Menu rolável sem barra visível */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+/* Nada pode vazar para fora das caixas */
+h1, h2, h3, h4 { overflow-wrap: anywhere; }
+.grid > * { min-width: 0; }
