@@ -1,0 +1,67 @@
+/* Página escondida (/surpresa). Tudo com prefixo sp- para não mexer no resto do site. */
+.sp-root {
+  --rose: #e9a3b6; --rose-soft: #f3c9d4; --ink: #f6e9ed;
+  position: fixed; inset: 0; z-index: 100; overflow-y: auto; overflow-x: hidden;
+  color: var(--ink); font-family: var(--font-lora), Georgia, serif;
+  background:
+    radial-gradient(900px 520px at 50% -5%, rgba(120, 34, 66, .38), transparent 65%),
+    radial-gradient(700px 500px at 90% 100%, rgba(80, 20, 50, .35), transparent 70%),
+    #0b0509;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* corações */
+.sp-hearts { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.sp-heart {
+  position: absolute; top: -8vh; left: var(--x); font-size: var(--s); line-height: 1; opacity: 0;
+  animation: sp-fall var(--d) linear var(--delay) infinite; will-change: transform, opacity;
+}
+@keyframes sp-fall {
+  0%   { transform: translate3d(0, 0, 0) rotate(-8deg); opacity: 0; }
+  10%  { opacity: var(--o); }
+  50%  { transform: translate3d(var(--sway), 55vh, 0) rotate(8deg); }
+  90%  { opacity: var(--o); }
+  100% { transform: translate3d(calc(var(--sway) * -1), 115vh, 0) rotate(-6deg); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .sp-hearts { display: none; } }
+
+/* blocos principais */
+.sp-gate, .sp-letter { position: relative; z-index: 1; animation: sp-in 1.2s ease both; }
+@keyframes sp-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.sp-over { font-size: .72rem; letter-spacing: .32em; text-transform: uppercase; color: var(--rose); opacity: .85; }
+.sp-back { display: inline-block; font-size: .85rem; color: var(--rose); opacity: .6; text-decoration: none; padding: .75rem 1rem; }
+.sp-back:hover { opacity: 1; }
+
+/* pergunta */
+.sp-gate { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 3rem 1.5rem; }
+.sp-question { margin-top: 1.1rem; font-family: var(--font-cormorant), Georgia, serif; font-style: italic; font-weight: 500; font-size: clamp(2rem, 6.5vw, 3.2rem); line-height: 1.15; max-width: 22ch; }
+.sp-form { margin-top: 2.4rem; display: flex; flex-direction: column; align-items: center; gap: 1.4rem; width: 100%; max-width: 20rem; }
+.sp-input {
+  width: 100%; text-align: center; background: transparent; color: var(--ink); font: inherit; font-size: 1.15rem;
+  padding: .6rem .5rem; border: 0; border-bottom: 1px solid rgba(233, 163, 182, .5); border-radius: 0; outline: none;
+}
+.sp-input::placeholder { color: rgba(246, 233, 237, .35); }
+.sp-input:focus { border-bottom-color: var(--rose); }
+.sp-btn { font: inherit; font-size: .95rem; letter-spacing: .08em; color: var(--ink); background: rgba(233, 163, 182, .12); border: 1px solid rgba(233, 163, 182, .55); border-radius: 999px; padding: .75rem 2.4rem; min-height: 48px; cursor: pointer; transition: background .3s; }
+.sp-btn:hover { background: rgba(233, 163, 182, .22); }
+.sp-hint { margin-top: 1.1rem; min-height: 1.4rem; font-size: .95rem; color: var(--rose-soft); }
+.sp-shake { animation: sp-shake .45s ease; }
+@keyframes sp-shake { 20%, 60% { transform: translateX(-6px); } 40%, 80% { transform: translateX(6px); } }
+
+/* página dela */
+.sp-letter { max-width: 40rem; margin: 0 auto; padding: 5.5rem 1.5rem 3rem; text-align: left; }
+.sp-head { text-align: center; }
+.sp-title { margin-top: 1rem; font-family: var(--font-cormorant), Georgia, serif; font-style: italic; font-weight: 500; font-size: clamp(2.8rem, 10vw, 4.8rem); line-height: 1.05; color: var(--rose-soft); text-shadow: 0 0 40px rgba(233, 163, 182, .25); }
+.sp-rule { display: flex; align-items: center; gap: .9rem; max-width: 14rem; margin: 1.6rem auto 0; color: var(--rose); font-size: .85rem; }
+.sp-rule::before, .sp-rule::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(233, 163, 182, .6)); }
+.sp-rule::after { transform: scaleX(-1); }
+
+.sp-text { margin-top: 3.2rem; }
+.sp-text p { font-size: 1.06rem; line-height: 1.95; color: rgba(246, 233, 237, .9); margin-bottom: 1.7rem; text-wrap: pretty; }
+.sp-text p.sp-lead { font-family: var(--font-cormorant), Georgia, serif; font-style: italic; font-size: 1.3rem; line-height: 1.7; color: var(--ink); }
+
+.sp-photo { margin: 3rem auto 0; width: min(100%, 28rem); }
+.sp-img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid rgba(233, 163, 182, .35); box-shadow: 0 0 0 6px rgba(233, 163, 182, .05), 0 18px 60px rgba(0, 0, 0, .55), 0 0 50px rgba(190, 60, 100, .18); }
+.sp-img-empty { aspect-ratio: 4 / 5; display: flex; align-items: center; justify-content: center; font-size: 3rem; background: rgba(233, 163, 182, .06); }
+.sp-back-end { display: block; text-align: center; margin: 3.5rem auto 0; }
