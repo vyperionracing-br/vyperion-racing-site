@@ -1,12 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import { Instagram, Mail } from "lucide-react";
+import { Instagram, Mail, Code2 } from "lucide-react";
 import Section from "./Section";
 import Img from "./Img";
 import LogoTile from "./LogoTile";
 import SecretCredit from "./SecretCredit";
 import { useLang } from "./LanguageProvider";
-import { links, partners, ui, tagline } from "@/data/content";
+import { links, partners, ui, tagline, L } from "@/data/content";
 import { images, partnerLogos } from "@/data/images";
 
 // Rodapé: três grupos por tamanho de logo. Os nomes precisam ser iguais aos de content.ts.
@@ -43,9 +43,19 @@ export default function ContactSection() {
       <div className="mt-10 mx-auto w-14 h-14 rounded-full border-2 border-cyan flex items-center justify-center overflow-hidden">
         <Img src={images.logo} alt="Vyperion" className="w-full h-full object-contain p-1" fallback={<span className="font-display text-cyan">VR</span>} />
       </div>
-      <SecretCredit>
       <p className="mt-4 font-display text-sm">VYPERION RACING © 2026 · Colégio SESI Cascavel — PR</p>
       <p className="mt-1 text-cyan font-display text-xs">{tagline}</p>
+      {/* Crédito do desenvolvedor. 10 cliques seguidos aqui abrem /surpresa (ver SecretCredit.tsx) */}
+      <SecretCredit className="mt-10 mx-auto max-w-sm border-t border-cyan/20 pt-6 pb-2">
+        <p className="flex items-center justify-center gap-2 font-display text-[10px] tracking-[0.3em] text-muted uppercase">
+          <Code2 size={14} className="text-cyan" />{t(L("Desenvolvido por", "Developed by"))}
+        </p>
+        <p className="mt-2 font-display font-bold text-lg tracking-wide text-white">ANDREY SIMONETO</p>
+        <p className="text-xs font-bold tracking-widest text-cyan">@andreysimoneto</p>
+        <p className="mt-3 inline-block rounded-md border border-teal/50 bg-navy px-3 py-1.5 text-xs text-muted">
+          {t(L("Formando em Técnico em Desenvolvimento de Sistemas", "Graduating as a Systems Development Technician"))}
+        </p>
+        <p className="mt-2 font-display text-[10px] font-bold tracking-widest text-teal uppercase">Colégio Presidente Costa e Silva</p>
       </SecretCredit>
     </footer></>);
 }
