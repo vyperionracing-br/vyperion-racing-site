@@ -1,0 +1,2 @@
+Coloque aqui a foto de voces dois com o nome: nos.jpg
+(se usar outro nome/extensao, mude em src/data/images.ts -> surpresa)
