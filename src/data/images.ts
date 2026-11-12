@@ -4,7 +4,7 @@ export const images = {
   logo: "/images/logo.jpeg",              // logo da Vyperion
   car: "/images/carro.png",              // foto do carro (Apólo)
   stemLogo: "/images/stem-racing.png",   // logo da STEM Racing
-  qr: "/images/qr.png",                  // QR Code
+  qr: "/images/parceiros/qr.png",                  // QR Code
   teamPhoto: "/images/foto-do-time.png", // foto de toda a equipe (seção Sobre Nós)
   surpresa: "/images/surpresa/nos.jpg",  // foto de vocês dois (página escondida /surpresa)
 };
@@ -22,7 +22,7 @@ export const teamPhotos: Record<string, string> = {
 // Logo de cada instituição/patrocinador: a chave é o NOME igual ao de content.ts
 export const partnerLogos: Record<string, string> = {
   "Colégio SESI": "/images/sesi-industria.png",
-  "SENAI": "/images/parceiros/senai.jpeg",
+  "SENAI": "/images/parceiros/senai.png",
   "Studio Sherpe": "/images/parceiros/studio-sherpe.png",
   "RM Usinagem": "/images/parceiros/rm-usinagem.png",
   "Rhaela Semijoias": "/images/parceiros/rhaela.png",
@@ -35,5 +35,5 @@ export const partnerLogos: Record<string, string> = {
   "Vitória Pneus e Rodas": "/images/parceiros/vitoria-pneus.jpeg",
   "Nando Mecânica": "/images/parceiros/nando.png",
   "Sicredi": "/images/parceiros/sicredi.jpeg",
-  "Sindirepa": "/images/parceiros/sindirepa.jpeg",
+  "Sindirepa": "/images/parceiros/sindirepa.png",
 };
