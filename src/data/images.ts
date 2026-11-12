@@ -6,7 +6,7 @@ export const images = {
   stemLogo: "/images/stem-racing.png",   // logo da STEM Racing
   qr: "/images/parceiros/qr.png",                  // QR Code
   teamPhoto: "/images/foto-do-time.png", // foto de toda a equipe (seção Sobre Nós)
-  surpresa: "/images/surpresa/nos.jpg",  // foto de vocês dois (página escondida /surpresa)
+  surpresa: "/images/surpresa/foto4.jpg",  // foto de vocês dois (página escondida /surpresa)
 };
 
 // Foto de cada integrante: a chave é o NOME igual ao de content.ts
