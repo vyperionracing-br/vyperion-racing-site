@@ -34,6 +34,6 @@ export const partnerLogos: Record<string, string> = {
   "Person 3D": "/images/parceiros/person3d.png",
   "Vitória Pneus e Rodas": "/images/parceiros/vitoria-pneus.jpeg",
   "Nando Mecânica": "/images/parceiros/nando.png",
-  "Sicredi": "/images/parceiros/sicredi.jpeg",
+  "Sicredi": "/images/parceiros/sicredi.png",
   "Sindirepa": "/images/parceiros/sindirepa.png",
 };
