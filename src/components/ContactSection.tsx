@@ -4,6 +4,7 @@ import { Instagram, Mail } from "lucide-react";
 import Section from "./Section";
 import Img from "./Img";
 import LogoTile from "./LogoTile";
+import SecretCredit from "./SecretCredit";
 import { useLang } from "./LanguageProvider";
 import { links, partners, ui, tagline } from "@/data/content";
 import { images, partnerLogos } from "@/data/images";
@@ -16,18 +17,18 @@ const footerGroups = [
 ];
 
 export default function ContactSection() {
-  const { t, lang } = useLang();
+  const { t } = useLang();
   const btn = "btn flex items-center justify-center gap-3 px-8 py-4 rounded-2xl border-2 border-cyan bg-card/80 font-display font-bold";
   return (<>
     <Section id="contact" title={t(ui.contactTitle)}>
-      <div className="mx-auto grid md:grid-cols-2 gap-5 max-w-3xl">
+      <div className="grid md:grid-cols-2 gap-5 max-w-3xl">
         <motion.a whileTap={{ scale: 0.95 }} href={links.instagram} target="_blank" rel="noreferrer" className={btn}><Instagram /> Instagram</motion.a>
         <motion.a whileTap={{ scale: 0.95 }} href={`mailto:${links.email}`} className={btn}><Mail /> E-mail</motion.a>
       </div>
-      <div className="mx-auto mt-10 w-44 h-44 rounded-2xl border border-cyan/40 bg-white flex items-center justify-center overflow-hidden">
+      <div className="mt-10 w-44 h-44 rounded-2xl border border-cyan/40 bg-white flex items-center justify-center overflow-hidden">
         <Img src={images.qr} alt="QR Code" className="w-full h-full object-contain p-2" fallback={<span className="text-navy/60 text-sm">QR Code</span>} />
       </div>
-      <p className="mx-auto mt-8 text-muted max-w-xl">{t(ui.contactText)}</p>
+      <p className="mt-8 text-muted max-w-xl">{t(ui.contactText)}</p>
     </Section>
 
     <footer className="border-t border-cyan/25 bg-card/85 px-6 py-10 text-center">
@@ -44,12 +45,6 @@ export default function ContactSection() {
       </div>
       <p className="mt-4 font-display text-sm">VYPERION RACING © 2026 · Colégio SESI Cascavel — PR</p>
       <p className="mt-1 text-cyan font-display text-xs">{tagline}</p>
-
-      {/* Créditos */}
-      <div className="mx-auto mt-8 max-w-xl border-t border-cyan/15 pt-6 space-y-1.5 text-xs text-muted">
-        <p className="font-display text-[10px] tracking-[0.25em] text-cyan/80">{lang === "pt" ? "CRÉDITOS" : "CREDITS"}</p>
-        <p>{lang === "pt" ? "Landing page desenvolvida por Andrey Simoneto, em parceria com a equipe Vyperion Racing." : "Landing page developed by Andrey Simoneto, in partnership with the Vyperion Racing team."}</p>
-        <p>{lang === "pt" ? "Formando no curso Técnico em Desenvolvimento de Sistemas — Colégio Presidente Costa e Silva, Cascavel — PR." : "Graduating in the Systems Development Technical course — Colégio Presidente Costa e Silva, Cascavel, Paraná, Brazil."}</p>
-      </div>
+      <p className="mt-4 text-xs text-muted">{t(ui.credits)} <SecretCredit name="Andrey" /></p>
     </footer></>);
 }
