@@ -43,8 +43,9 @@ export default function ContactSection() {
       <div className="mt-10 mx-auto w-14 h-14 rounded-full border-2 border-cyan flex items-center justify-center overflow-hidden">
         <Img src={images.logo} alt="Vyperion" className="w-full h-full object-contain p-1" fallback={<span className="font-display text-cyan">VR</span>} />
       </div>
+      <SecretCredit>
       <p className="mt-4 font-display text-sm">VYPERION RACING © 2026 · Colégio SESI Cascavel — PR</p>
       <p className="mt-1 text-cyan font-display text-xs">{tagline}</p>
-      <p className="mt-4 text-xs text-muted">{t(ui.credits)} <SecretCredit name="Andrey" /></p>
+      </SecretCredit>
     </footer></>);
 }
