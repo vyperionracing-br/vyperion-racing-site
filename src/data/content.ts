@@ -4,8 +4,8 @@ export const L = (pt: string, en: string): Localized => ({ pt, en });
 
 export const tagline = "Modern, Fast, Vyperion.";
 export const links = {
-  instagram: "https://instagram.com/vyperionracing",   // TROCAR
-  email: "contato@vyperionracing.com",                 // TROCAR
+  instagram: "https://www.instagram.com/vyperionracing?mdxt=bjFudms3ODZjaWow",   // TROCAR
+  email: "vyperionracing@gmail.com",                 // TROCAR
 };
 
 export const ui = {
